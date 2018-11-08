@@ -1,5 +1,6 @@
 package com.learn.chapter01.Combine;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,22 +10,27 @@ import java.util.List;
  * email:657271181@qq.com
  */
 public class CardTab extends Tab {
+    private List<Tab> tabs;
 
     public CardTab(String title){
         super(title);
+        tabs = new ArrayList<Tab>();
     }
 
-    private List<Tab> tabs;
-
-    protected void add(Tab tab) {
+    public void add(Tab tab) {
         tabs.add(tab);
     }
 
-    protected void remove(Tab tab) {
+    public void remove(Tab tab) {
         tabs.remove(tab);
     }
 
-    public static void main(String[] args) {
-        CardTab cardTab = new CardTab("rootTab");
+//    public static void main(String[] args) {
+//        CardTab cardTab = new CardTab("rootTab");
+//    }
+    public void print(){
+        for(Tab t:tabs){
+            System.out.println(t.getTitle());
+        }
     }
 }

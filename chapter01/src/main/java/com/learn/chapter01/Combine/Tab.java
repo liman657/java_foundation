@@ -18,4 +18,7 @@ public abstract class Tab {
 
     protected abstract void remove(Tab tab);
 
+    public String getTitle() {
+        return title;
+    }
 }
