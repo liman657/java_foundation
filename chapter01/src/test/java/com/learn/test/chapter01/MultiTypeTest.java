@@ -13,10 +13,11 @@ import org.junit.Test;
 public class MultiTypeTest {
 
     @Test
-    public void testMultiType(){
-        Super sup = new Sub(); // Upcast
-        System.out.println("sup.field = " + sup.field +
-                ", sup.getField() = " + sup.getField());
+    public void testMultiType() {
+        Super superDemo = new Sub(); // Upcast
+        //向上转型之后，属性值会变成父类的属性值
+        System.out.println("supDemo.field = " + superDemo.field +
+                ", supDemo.getField() = " + superDemo.getField());
         Sub sub = new Sub();
         System.out.println("sub.field = " +
                 sub.field + ", sub.getField() = " +
