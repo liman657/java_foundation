@@ -25,5 +25,4 @@ public class MultiTypeTest {
                 ", sub.getSuperField() = " +
                 sub.getSuperField());
     }
-
 }
